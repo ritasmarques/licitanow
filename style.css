@@ -1,0 +1,382 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:'Inter',sans-serif;
+  color:#0F172A;
+  background:#F9FBFA;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.navbar{
+  position:fixed;
+  width:100%;
+  background:white;
+  padding:20px 0;
+  z-index:1000;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  height:40px;
+}
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+.nav-links a{
+  text-decoration:none;
+  color:#0F172A;
+  font-weight:500;
+}
+.btn-nav{
+  background:#0E5E3A;
+  color:white !important;
+  padding:10px 18px;
+  border-radius:8px;
+  transition:0.3s;
+}
+.btn-nav:hover{
+  opacity:0.9;
+}
+
+/* Hamburger menu */
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+}
+.hamburger span{
+  width:25px;
+  height:3px;
+  background:#0F172A;
+}
+
+/* =====================================================
+   SECÇÃO 1 - HERO SECTION
+===================================================== */
+.hero{
+  padding:160px 0 120px;
+  display:flex;
+  align-items:center;
+}
+.hero-grid{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:40px;
+}
+.hero-text h1{
+  font-size:54px;
+  line-height:1.1;
+}
+.hero-text span{
+  color:#0E5E3A;
+}
+.hero-text p{
+  margin:25px 0;
+  max-width:500px;
+  font-size:18px;
+}
+.btn-primary{
+  background:#0E5E3A;
+  color:white;
+  border:none;
+  padding:15px 28px;
+  border-radius:10px;
+  font-weight:600;
+}
+.hero-visual{
+  position:relative;
+  width:400px;
+  height:300px;
+}
+.hero-shape{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  background:radial-gradient(circle,#0E5E3A33,transparent 70%);
+}
+
+/* =====================================================
+   Animação texto
+===================================================== */
+.floating-card{
+  position:absolute;
+  background:white;
+  padding:15px 25px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  animation:float 5s ease-in-out infinite;
+  font-weight:600;
+}
+.floating-card.delay{
+  top:100px;
+  left:120px;
+  animation-delay:2s;
+}
+.floating-card.project{
+  top:200px;
+  left:50px;
+  animation-delay:1.5s;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+/* =====================================================
+   SECÇÃO 2 - MANIFESTO
+===================================================== */
+.manifesto{
+  background:#0E5E3A;
+  color:white;
+  padding:120px 20px;
+  text-align:center;
+}
+.manifesto h2{
+  font-size:42px;
+  font-weight:700;
+}
+.manifesto span{
+  opacity:0.8;
+}
+
+/* =====================================================
+   SECÇÃO 3 - SOBRE A LICITANOW
+===================================================== */
+.sobre-text{
+  max-width:550px;
+}
+.sobre-text h2{
+  font-size:32px;
+  margin-bottom:20px;
+}
+.sobre-text p{
+  color:#475569;
+  margin-bottom:15px;
+}
+.sobre-image img{
+  width:460px;
+  border-radius:12px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.1);
+}
+#sobre{
+  padding:35px 0;
+}
+
+/* =====================================================
+   SECÇÃO 4 - PROBLEMA DO SETOR
+===================================================== */
+.split{
+  display:flex;
+  flex-wrap:wrap;
+}
+.split-left{
+  flex:1;
+  padding:100px;
+  background:white;
+  height:400px;
+  padding-top:50px;
+}
+.split-right{
+  flex:1;
+  padding:100px;
+  background:#E6F4EC;
+  height:400px;
+  padding-top:50px;
+}
+.problem-item{
+  margin-bottom:40px;
+}
+
+/* =====================================================
+   SECÇÃO 5 - COMO FUNCIONA
+===================================================== */
+.processo{
+  padding-top:50px;
+  text-align:center;
+}
+.processo h2{
+  font-size:32px;
+  text-align:left;
+  padding-left:49px;
+  background-color:#0E5E3A;
+  margin-bottom:55px;
+  color:white;
+}
+.step{
+  margin-bottom:70px;
+  position:relative;
+}
+.number{
+  font-size:120px;
+  font-weight:800;
+  color:#d8f1e2;
+  position:absolute;
+  top:-60px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:-1;
+}
+.step h3{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+
+/* =====================================================
+   GERAL
+===================================================== */
+.section{
+  padding:100px 0;
+}
+.light{
+  background:#E9F8F1;
+}
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:10px;
+}
+.section-subtitle{
+  text-align:center;
+  color:#475569;
+  margin-bottom:25px;
+}
+
+/* =====================================================
+   GRID & CARDS
+===================================================== */
+.grid-3{
+  display:grid;
+  gap:30px;
+  grid-template-columns:repeat(3,1fr);
+}
+.card{
+  background:white;
+  padding:30px;
+  border-radius:30px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.05);
+  text-align:center;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.1);
+}
+
+/* =====================================================
+   SECÇÃO 7 - CTA
+===================================================== */
+.cta{
+  background:#0E5E3A;
+  color:white;
+  text-align:center;
+  padding:100px 20px;
+}
+.btn-white{
+  margin-top:30px;
+  background:white;
+  color:#0E5E3A;
+  border:none;
+  padding:15px 30px;
+  border-radius:10px;
+  font-weight:600;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer{
+  padding:40px 20px;
+  background:#0F172A;
+  color:white;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+  margin-bottom:40px;
+}
+.footer h4{
+  margin-bottom:15px;
+}
+.footer p,
+.footer a{
+  margin-bottom:10px;
+  color:white;
+  text-decoration:none;
+}
+.footer a:hover{
+  color:#4CAF6D;
+}
+.footer-bottom{
+  text-align:center;
+  color:#94a3b8;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media(max-width:1024px){
+  .hero-grid,
+  .split{
+    flex-direction:column;
+    text-align:center;
+  }
+  .split-left,
+  .split-right{
+    padding:60px 20px;
+    height:auto;
+  }
+  .hero-text h1{font-size:36px;}
+  .number{font-size:80px;}
+}
+
+@media(max-width:768px){
+  .nav-links{
+    position:absolute;
+    top:80px;
+    right:0;
+    background:white;
+    flex-direction:column;
+    width:100%;
+    padding:30px;
+    display:none;
+  }
+  .nav-links.active{
+    display:flex;
+  }
+  .hamburger{
+    display:flex;
+  }
+  .grid-3{
+    grid-template-columns:1fr;
+  }
+  .processo h2{
+    font-size:30px;
+    text-align:center;
+    padding-left:0;
+  }
+  .footer-grid{
+    display:block;
+  }
+}
